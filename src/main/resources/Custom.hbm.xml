@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.itcast.pojo.Custome" table="custom" schema="custom5930">
+        <id name="customid">
+            <column name="customid" sql-type="int(4)"/>
+            <generator class="increment" />
+        </id>
+        <property name="cname">
+            <column name="cname" sql-type="varchar(20)" not-null="true"/>
+        </property>
+        <property name="caddress">
+            <column name="caddress" sql-type="varchar(20)" not-null="true"/>
+        </property>
+        <property name="cemail">
+            <column name="cemail" sql-type="varchar(100)" not-null="true"/>
+        </property>
+        <property name="cpost">
+            <column name="cpost" sql-type="varchar(13)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

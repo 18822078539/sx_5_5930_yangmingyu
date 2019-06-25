@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <!-- #  struts.objectFactory = spring	将action的创建交给spring容器
+            struts.objectFactory.spring.autoWire = name spring负责装配Action依赖属性
+            -->
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="*dept" class="customAction" method="{1}">
+            <result name="zhanshi">list.jsp</result>
+            <result name="toadd">save.jsp</result>
+            <result name="success" type="redirect">showdept</result>
+            <result name="toupdate">update.jsp</result>
+            <result name="error">update.jsp</result>
+        </action>
+    </package>
+
+</struts>
+	
